@@ -1,0 +1,96 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 100% 99%;
+    --foreground: 260 10% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 260 84% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 70% 96%;
+    --secondary-foreground: 260 30% 30%;
+
+    --muted: 260 10% 96%;
+    --muted-foreground: 260 10% 40%;
+
+    --accent: 260 70% 96%;
+    --accent-foreground: 260 30% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 260 10% 90%;
+    --input: 260 10% 90%;
+    --ring: 260 84% 60%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 260 10% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 260 10% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 260 10% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 260 84% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 30% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 260 30% 20%;
+    --muted-foreground: 260 10% 70%;
+
+    --accent: 260 30% 20%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 260 10% 20%;
+    --input: 260 10% 20%;
+    --ring: 260 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
